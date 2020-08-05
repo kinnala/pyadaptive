@@ -1,6 +1,6 @@
 # pyadaptive
 
-Refine a triangular mesh:
+Red-green-blue refinement of a triangular mesh:
 
 ```python
 from pyadaptive import refine
@@ -13,8 +13,7 @@ p = [[0., 0.],
 t = [[0, 1, 2],
      [1, 2, 3]]
 
-for _ in range(10):
-    p, t = refine(p, t, [1])
+p, t = refine(p, t, [0])  # refine first element
 ```
 
-![Refined mesh](https://user-images.githubusercontent.com/973268/89409977-9add9580-d72b-11ea-87fc-de5f556eb008.png)
+![Refined mesh](https://user-images.githubusercontent.com/973268/89417284-290b4900-d737-11ea-93f6-612e09e3fb8c.png)
