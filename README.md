@@ -1,10 +1,16 @@
 # pyadaptive
-Some adaptive mesh refinement scripts ported to NumPy. GPLv3 license as required by the libraries.
 
-## triref.py
+```python
+from pyadaptive import refine
 
-RGB refinement as described in the book of Sören Bartels.
+p = [[0., 0.],
+     [0., 1.],
+     [1., 0.],
+     [1., 1.]]
 
-## tetref.py
+t = [[0, 1, 2],
+     [1, 2, 3]]
 
-Wrapper for iFEM ((c) Long Chen). Requires oct2py.
+for _ in range(10):
+    p, t = refine(p, t, [1])
+```
